@@ -1,0 +1,67 @@
+Virtual Machine
+===============
+
+The "*.ova" file is a draft version of a Virtual Machine (VM) built
+and tested on a Windows 7 64-bit host of Oracle's VirtualBox (using
+version 4.1.8: http://virtualbox.org/).  The VM contains a turn-key
+BRL-CAD development environment.
+
+The intent of the VM is to give the Google Summer of Code interns a
+good starting place so they can be productive as soon as possible.
+Please give it a test drive so we can improve it before they start
+their work.
+
+You will need about 6 Gb free space on your computer (after the
+download) to import the VM into Oracle VirtualBox and run it.
+
+For the draft you will have to select the type of boot and then login
+manually (you should change the password upon first login). The
+user name is "vuser" with a password of "Vuser!", but the final
+version will have autoboot and autologin.
+
+Configuration Notes
+===================
+
+The Firefox browser has links on the bookmarks tool bar grouped by
+major dependency or category.  There are folder icons on the desktop
+for common BRL-CAD source code references, and important working
+sub-directories in the home directory.  Note that the "Downloads"
+directory can be removed but it tends to reappear if you download
+through Firefox and don't change its download defaults.
+
+The "brlcad-svn" directory has the brlcad/trunk current as of
+2012-03-10 and the "brlcad-build "directory has a configured and
+tested build followed by a "make clean" command.  The
+"brlcad-config.sh" script is a helper for repetitive configures and
+builds and it is set to be called from inside the build directory:
+
+ $ cd ~/brlcad-build ; ../brlcad-config.sh
+
+The successful trunk build (debug, with pdf extra docs) is installed
+in the default location (/usr/brlcad/dev-7.21.0).  The PATH and
+MANPATH reflect that location, and Firefox has links to the installed
+BRL-CAD documentation.
+
+The latest CMake, Bullet Physics, and Apache FOP are installed, and
+the environment variable APACHE_FOP points to the fop executable.
+
+Editors vi, emacs, and jEdit are installed alongside the simple gedit.
+
+The ~/.bash-aliases file has some handy aliases for getting around:
+
+ cad='cd ~/brlcad-svn'
+ cabd='cd ~/brlcad-build'
+ svu='svn update'
+ svc='svn ci'
+ svs='svn status'
+
+There are other aliases for safe versions of destructive commands (cp,
+rm, mv) and shortcuts for commonly-used commands and options.
+
+There is also a PERL5LIB environment variable set for the current
+directory:
+
+ PERL5LIB=.
+
+Suggestions for change or additions are encouraged.  Send to
+<brlcad-devel@lists.sourceforge.net>.
