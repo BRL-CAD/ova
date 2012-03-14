@@ -1,23 +1,20 @@
 Virtual Machine
 ===============
 
-The "*.ova" file is a draft version of a Virtual Machine (VM) built
-and tested on a Windows 7 64-bit host of Oracle's VirtualBox (using
-version 4.1.8: http://virtualbox.org/).  The VM contains a turn-key
+The "*.ova" file in this directory is a Virtual Machine (VM) built and
+tested on a Windows 7 64-bit host of Oracle's VirtualBox (using
+version 4.1.10: http://virtualbox.org/).  The VM contains a turn-key
 BRL-CAD development environment.
 
-The intent of the VM is to give the Google Summer of Code interns a
+The intent of the VM is to give Google Summer of Code interns a
 good starting place so they can be productive as soon as possible.
-Please give it a test drive so we can improve it before they start
-their work.
 
 You will need about 6 Gb free space on your computer (after the
 download) to import the VM into Oracle VirtualBox and run it.
 
-For the draft you will have to select the type of boot and then login
-manually (you should change the password upon first login). The
-user name is "vuser" with a password of "Vuser!", but the final
-version will have autoboot and autologin.
+The VM is set to autoboot and autologin.  The user name is "vuser"
+with a password of "Vuser!" (you should change the password upon first
+login).
 
 Configuration Notes
 ===================
