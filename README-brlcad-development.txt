@@ -3,7 +3,7 @@ BRL-CAD Build Configuration
 
 The recommended practice is to build BRL-CAD outside the BRL-CAD
 source directory.  There is a build directory already created in the
-home directory.
+home directory (brlcad-build).
 
 Here is a starting build configuration and build sequence.  (See
 ~/brlcad-svn/HACKING for more information.)
