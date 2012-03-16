@@ -12,9 +12,25 @@ good starting place so they can be productive as soon as possible.
 You will need about 6 Gb free space on your computer (after the
 download) to import the VM into Oracle VirtualBox and run it.
 
-The VM is set to autoboot and autologin.  The user name is "vuser"
-with a password of "Vuser!" (you should change the password upon first
-login).
+When starting the VM you may get a message about problems with the
+network adapter.  If you cannot start the VM successfully, you may
+have to experiment with the VM's network settings to find something
+that works for your VirtualBox host's harware.
+
+In the event nothing works for getting access to the network, you can
+choose to use no network at all.  Please read the VirtualBox
+documentation and then ask for help from the BRL-CAD developers if you
+don't find an answer quickly.
+
+The VM is set to autoboot and autologin.  The user name is "brlcad"
+with a password of "Brlcad!" (you should change the password upon
+first login).
+
+Note: To access the VM boot menu, press and hold the <SHIFT> key after
+starting the VM.
+
+mount -n -o remount,ro -t ext2 /dev/sda1 /
+
 
 Configuration Notes
 ===================
@@ -27,12 +43,14 @@ directory can be removed but it tends to reappear if you download
 through Firefox and don't change its download defaults.
 
 The "brlcad-svn" directory has the brlcad/trunk current as of
-2012-03-10 and the "brlcad-build "directory has a configured and
+2012-03-16 and the "brlcad-build "directory has a configured and
 tested build followed by a "make clean" command.  The
-"brlcad-config.sh" script is a helper for repetitive configures and
-builds and it is set to be called from inside the build directory:
+"README.txt" describes a recommended configuration and
+build sequence for use inside the build directory.
 
- $ cd ~/brlcad-build ; ../brlcad-config.sh
+The "Documentation" directory has BRL-CAD documents from the BRL-CAD
+site.  The "Other" directory has documents from the Bullet library
+home site.
 
 The successful trunk build (debug, with pdf extra docs) is installed
 in the default location (/usr/brlcad/dev-7.21.0).  The PATH and
@@ -44,12 +62,13 @@ the environment variable APACHE_FOP points to the fop executable.
 
 Editors vi, emacs, and jEdit are installed alongside the simple gedit.
 
+The latest Java runtime environment from Oracle is installed.
+
 The ~/.bash-aliases file has some handy aliases for getting around:
 
  cad='cd ~/brlcad-svn'
  cabd='cd ~/brlcad-build'
  svu='svn update'
- svc='svn ci'
  svs='svn status'
 
 There are other aliases for safe versions of destructive commands (cp,
