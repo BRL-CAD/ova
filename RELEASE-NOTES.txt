@@ -29,8 +29,6 @@ first login).
 Note: To access the VM boot menu, press and hold the <SHIFT> key after
 starting the VM.
 
-mount -n -o remount,ro -t ext2 /dev/sda1 /
-
 
 Configuration Notes
 ===================
@@ -47,6 +45,11 @@ The "brlcad-svn" directory has the brlcad/trunk current as of
 tested build followed by a "make clean" command.  The
 "README.txt" describes a recommended configuration and
 build sequence for use inside the build directory.
+
+The "brlcad-code-examples" directory has a "README-examples.txt" file
+that describes briefly the purposes of the code examples shown.  The
+files are soft links from the version-controlled source in the BRL-CAD
+tree.
 
 The "Documentation" directory has BRL-CAD documents from the BRL-CAD
 site.  The "Other" directory has documents from the Bullet library

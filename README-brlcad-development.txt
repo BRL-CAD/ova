@@ -31,7 +31,7 @@ steps above:
   $ cd ; cd brlcad-build
   $ make
 
-BRL-CAD Deveopment
+BRL-CAD Development
 ==================
 
 Note that as you modify files during your development work, you will
