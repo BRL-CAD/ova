@@ -1,10 +1,12 @@
 Virtual Machine
 ===============
 
-The "*.ova" file in this directory is a Virtual Machine (VM) built and
-tested on a Windows 7 64-bit host of Oracle's VirtualBox (using
-version 4.1.10: http://virtualbox.org/).  The VM contains a turn-key
-BRL-CAD development environment.
+The "*.ova" file in this directory is a Virtual Machine (VM; also
+called Virtual Appliance) built and tested on a Windows 7 64-bit host
+of Oracle's VirtualBox (using version 4.1.10: http://virtualbox.org/).
+The VM contains a turn-key BRL-CAD development environment.  (Note the
+VirtualBox web site has complete instructions for obtaining and
+installing VirtualBox.)
 
 The intent of the VM is to give Google Summer of Code interns a
 good starting place so they can be productive as soon as possible.
@@ -12,10 +14,17 @@ good starting place so they can be productive as soon as possible.
 You will need about 6 Gb free space on your computer (after the
 download) to import the VM into Oracle VirtualBox and run it.
 
+To load the VM, start the VirtualBox Manager and choose File => Import
+Appliance => Choose.  Then browse to the location of the VM .ova file
+you downloaded and select open.  Then select Next, then Import and the
+VM is imported.  When the Import is complete you will see the VM name
+in the VirtualBox Manager.  To start the VM highlight its name and
+either double-click it or select Start from the top menu row.
+
 When starting the VM you may get a message about problems with the
 network adapter.  If you cannot start the VM successfully, you may
 have to experiment with the VM's network settings to find something
-that works for your VirtualBox host's harware.
+that works for your VirtualBox host's hardware.
 
 In the event nothing works for getting access to the network, you can
 choose to use no network at all.  Please read the VirtualBox
@@ -43,8 +52,8 @@ through Firefox and don't change its download defaults.
 The "brlcad-svn" directory has the brlcad/trunk current as of
 2012-03-16 and the "brlcad-build "directory has a configured and
 tested build followed by a "make clean" command.  The
-"README.txt" describes a recommended configuration and
-build sequence for use inside the build directory.
+"README-brlcad-development.txt" describes a recommended configuration
+and build sequence for use inside the build directory.
 
 The "brlcad-code-examples" directory has a "README-examples.txt" file
 that describes briefly the purposes of the code examples shown.  The
