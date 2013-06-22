@@ -1,4 +1,5 @@
-In this directory are some code examples for common tasks (soft links from the BRL-CAD source tree):
+In this directory are some code examples for common tasks (soft links
+from the BRL-CAD source tree):
 
 Example shooting a ray:
 src/rt/rtexample.c

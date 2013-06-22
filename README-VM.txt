@@ -3,15 +3,16 @@ Virtual Machine
 
 The "*.ova" file in this directory is a Virtual Machine (VM; also
 called Virtual Appliance) built and tested on a Windows 7 64-bit host
-of Oracle's VirtualBox (using version 4.1.10: http://virtualbox.org/).
+of Oracle's VirtualBox (using version 4.1.12: http://virtualbox.org/).
 The VM contains a turn-key BRL-CAD development environment.  (Note the
 VirtualBox web site has complete instructions for obtaining and
 installing VirtualBox.)
 
-The intent of the VM is to give Google Summer of Code interns a
-good starting place so they can be productive as soon as possible.
+The intent of the VM is to give Google Summer of Code interns (or
+anyone interested in test driving BRL-CAD) a good starting place so
+they can be productive as soon as possible.
 
-You will need about 6 Gb free space on your computer (after the
+You will need about 7 Gb free space on your computer (after the
 download) to import the VM into Oracle VirtualBox and run it.
 
 To load the VM, start the VirtualBox Manager and choose File => Import
