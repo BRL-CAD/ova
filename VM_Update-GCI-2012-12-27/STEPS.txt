@@ -1,0 +1,28 @@
+Update VirtualBox Guest Additions to 4.2.6
+Run `svn up` inside brlcad-svn, updating local copy to r54118
+Run `sudo aptitude update` to update aptitude repositories
+Run `sudo aptitude full-upgrade` to upgrade system
+Update CMake to 2.8.10 from source [CMAKE.txt]
+Update FOP to 1.1 from source [FOP.txt]
+Build and install BRL-CAD as described in "README-brlcad-development.txt"
+    [CMAKE.log MAKE.log MAKE_INSTALL.log]
+Run `make clean`
+Update $PATH in ~/.bash_aliases to use brlcad-7.22.1
+Remove /usr/brlcad/dev-7.21.0
+Clear Firefox history
+Replace the contents of "RELEASE-NOTES.txt" with my file ("README.txt")
+
+DIDN'T DO:
+Update Bullet to 2.81. BRL-CAD fails to compile with Bullet 2.81, so I restored
+to 2.80.
+
+Update the Java Runtime Environment. Latest is 1.7.10, installed is 1.7.3.
+
+Using the flags described in "README-brlcad-development.txt", `make install`
+installs the files to /usr/brlcad/dev-7.22.1. Is it supposed to install to
+dev-7.22.0, or is this okay?
+
+When I first used the VM, ~/brlcad-build was empty, although the README states
+that it contains a configured and tested build, followed by `make clean`. After
+building and running `make clean` myself, I did not remove the contents of
+brlcad-build.
