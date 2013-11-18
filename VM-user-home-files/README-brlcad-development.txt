@@ -6,30 +6,47 @@ source directory.  There is a build directory already created in the
 home directory (brlcad-build).
 
 Here is a starting build configuration and build sequence.  (See
-~/brlcad-svn/HACKING for more information.)
+~/brlcad-svn-trunk/HACKING for more information.)
 
   $ cd ; cd brlcad-build
-  $ cmake ../brlcad-svn               \
+  $ cmake ../brlcad-svn-trunk         \
                                       \
        -DBRLCAD_BUNDLED_LIBS=ON       \
        -DBRLCAD_ZLIB=OFF              \
        -DCMAKE_BUILD_TYPE=DEBUG
 
-For convenience you make want to put the commands into a shell script.
-If you do so, make sure it is placed outside the build directory in
-case you want to delete everything in that build directory.
+For convenience a shell script (brlcad-config.sh) has been provided to
+execute that sequence.  Note that it is placed outside the build
+directory in case you want to delete everything in that build
+directory.
+
 
 BRL-CAD Build
 =============
 
+Before building the trunk you should normally ensure you have the
+latest changes:
+
+  $ cd ; cd brlcad-svn-trunk
+  $ svn update
+
 The following assumes you have a valid configuration following the
-steps above:
+steps above (and using the provided script):
 
   $ cd ; cd brlcad-build
-  $ make
+  $ ../brlcad-config.sh >& config.log
+
+After a successful configure you can start the build:
+
+  $ make >& build.log
+
+Note that the configure and build steps in a virtual machine can take
+a long time (config 10 min 26 sec; build: ? minutes on the Windows
+host where the VM was built), whereas a native build on a modern,
+quad-core Debian 64-bit host can be done in seven minutes or less.
 
 BRL-CAD Development
-==================
+===================
 
 Note that as you modify files during your development work, you will
 repeat the configure/make cycle often. The configuration may not have
@@ -53,6 +70,3 @@ the next step after completing all the above successfully:
 
   $ cd ; cd brlcad-build
   $ sudo make install
-
-
-
