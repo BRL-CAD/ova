@@ -41,9 +41,10 @@ After a successful configure you can start the build:
   $ make >& build.log
 
 Note that the configure and build steps in a virtual machine can take
-a long time (config 10 min 26 sec; build: ? minutes on the Windows
-host where the VM was built), whereas a native build on a modern,
-quad-core Debian 64-bit host can be done in seven minutes or less.
+a long time (config 10 min 26 sec; build: 3 hr 12 minutes on the
+Windows host where the VM was built), whereas a native build on a
+modern, quad-core Debian 64-bit host can be done in seven minutes or
+less.
 
 BRL-CAD Development
 ===================
