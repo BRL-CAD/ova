@@ -4,13 +4,23 @@
 
 export EDITOR=/usr/bin/vi
 
+# set the BRL-CAD debug trunk version
+BVER=7.24.1
+
 if [ -n "$PATH" ] ; then
   # append
-  PATH=.:/usr/brlcad/dev-7.21.0/bin:$PATH
+  PATH=/usr/brlcad/dev-${BVER}/bin:$PATH
+else
+  PATH=/usr/brlcad/dev-${BVER}/bin
 fi
+
 if [ -n "$MANPATH" ] ; then
   # append
-  MANPATH=/usr/brlcad/dev-7.21.0/share/brlcad/7.21.0/man:$MANPATH
+  MANPATH=/usr/brlcad/dev-${BVER}/share/man:$MANPATH
+else
+  # the colon at the end means use the system manpath info, if any
+  # (see 'man manpath')
+  MANPATH=/usr/brlcad/dev-${BVER}/share/brlcad:
 fi
 
 #=================
