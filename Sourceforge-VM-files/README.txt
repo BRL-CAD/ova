@@ -32,23 +32,21 @@ find an answer quickly. You can find them on IRC (irc.freenode.net
 Configuration Notes
 ===================
 
-The Iceweasel (Firefox clone) browser has links on the bookmarks tool
-bar grouped by major dependency or category.
+The Chromium browser has BRL-CAD links on the bookmarks tool bar.
 
 The "brlcad-svn" directory has the brlcad/trunk current as of
-2013-11-17 or r54118 and the "brlcad-build" directory has a configured
+2013-11-18 (r58556) and the "brlcad-build" directory has a configured
 and tested build followed by a "make clean" command. The
 "README-brlcad-development.txt" file describes a recommended
 configuration and build sequence for use inside the build directory.
 
 The successful trunk build is installed in the default location
-(/usr/brlcad/dev-7.22.1). The PATH and MANPATH reflect that location,
-and Iceweasel has links to the installed BRL-CAD documentation.
+(/usr/brlcad/dev-7.24.1). The PATH and MANPATH reflect that location,
+and Chromium has links to the installed BRL-CAD documentation.
 
-CMake 2.8.10, Bullet Physics 2.80, and Apache FOP 1.1 are installed,
-and the environment variable APACHE_FOP points to the fop executable.
+gcc/g++ version 4.7.2 is installed, as is CMake 2.8.9.
 
-Editors vi, emacs, and jEdit are installed alongside the simple gedit.
+Editors vi and emacs are installed alongside the simple gedit.
 
 Suggestions for change or additions are encouraged.  Send to
 <brlcad-devel@lists.sourceforge.net>
