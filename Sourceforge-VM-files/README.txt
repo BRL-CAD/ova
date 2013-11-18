@@ -35,10 +35,8 @@ Configuration Notes
 The Chromium browser has BRL-CAD links on the bookmarks tool bar.
 
 The "brlcad-svn" directory has the brlcad/trunk current as of
-2013-11-18 (r58556) and the "brlcad-build" directory has a configured
-and tested build followed by a "make clean" command. The
-"README-brlcad-development.txt" file describes a recommended
-configuration and build sequence for use inside the build directory.
+2013-11-18 (r58556) and there is an empty "brlcad-build" directory 
+ready to use as described in the "README-brlcad-development.txt" file.
 
 The successful trunk build is installed in the default location
 (/usr/brlcad/dev-7.24.1). The PATH and MANPATH reflect that location,
