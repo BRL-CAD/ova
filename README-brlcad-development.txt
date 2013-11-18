@@ -13,10 +13,7 @@ Here is a starting build configuration and build sequence.  (See
                                       \
        -DBRLCAD_BUNDLED_LIBS=ON       \
        -DBRLCAD_ZLIB=OFF              \
-       -DCMAKE_BUILD_TYPE=DEBUG       \
-       -DBRLCAD_EXTRADOCS_PDF=PDF     \
-       -DBRLCAD_EXTRADOCS_PDF_MAN=OFF \
-       -DBRLCAD_ENABLE_OPENGL=OGL
+       -DCMAKE_BUILD_TYPE=DEBUG
 
 For convenience you make want to put the commands into a shell script.
 If you do so, make sure it is placed outside the build directory in

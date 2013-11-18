@@ -1,0 +1,51 @@
+VirtualBox
+==========
+
+Select new dynamic hard drive of 20 Gb.
+
+Select all else as the default.
+
+Debian 7.2 (32-bit: i386)
+=========================
+
+http://debian.org
+
+Use the net install CD.
+
+Use software selections of: desktop
+
+Set host name: brlcad.localdomain.
+
+Set user name: brlcad
+
+Set root and user password: Brlcad!
+
+Use the Gnome Classic Desktop at login.
+
+Desktop customizations:
+
+  Applications | System Tools | Preferences | Advanced Settings
+    Theme => Window theme => Bright
+
+Additional packages:
+
+  freeglut3-dev
+  cmake
+  subversion
+  fop
+
+Download and install the Bullet Physics library:
+
+  $ wget ... bullet-2.82-r2703.tgz .
+  $ tar -xvzf bullet-2.82-r2703.tgz
+  $ cd bullet-2.82-r2703
+  $ cd build
+  $ cmake .. -DBUILD_SHARED_LIBS=ON
+  $ make
+  $ sudo make install
+
+Too many warnings--use older version 2.78.
+
+Using read-only subversion checkout, revision 2705.
+
+  
