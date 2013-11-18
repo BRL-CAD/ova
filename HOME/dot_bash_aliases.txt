@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# rename to $HOME/.bash_aliases
+
+export EDITOR=/usr/bin/vi
+
+if [ -n "$PATH" ] ; then
+  # append
+  PATH=.:/usr/brlcad/dev-7.21.0/bin:$PATH
+fi
+if [ -n "$MANPATH" ] ; then
+  # append
+  MANPATH=/usr/brlcad/dev-7.21.0/share/brlcad/7.21.0/man:$MANPATH
+fi
+
+#=================
+# other variables
+export PERL5LIB=.
+
+export LC_CTYPE=C
+export LANG=en_US
+export LC_ALL=C
+
+#=================
+# some convenience aliases
+# and safe versions of dangerous commands
+alias cl='rm -i *~'
+alias chx='chmod +x'
+alias cp='cp -i'
+alias cpf='cp -f' # for webdav use (-p not allowed)
+alias df='df -h'
+alias du='du -h'
+alias ev='evince'
+alias h='history'
+alias ls1='ls -1'
+alias lsa='ls -a'
+alias lsd='ls -d'
+alias lsl='ls -lh'
+alias lsld='ls -lhd'
+alias lslds='ls -lhdrS'
+alias lsldt='ls -lhdrt'
+alias lsr='ls -lrt'
+alias lsrc='cd /usr/local/src'
+alias lss='ls -CF'
+alias lst='ls -lrt'
+alias md='mkdir -p'
+alias mv='mv -i'
+alias rm='rm -i'
+alias s='. ~/.bash_aliases'
+alias sb='. ~/.bashrc'
+alias xmll='xmllint --noout'
+
+alias svc='svn ci'
+alias svs='svn status'
+alias svu='svn update'
+alias cad='cd ~/brlcad-svn'
+alias cadb='cd ~/brlcad-build'
