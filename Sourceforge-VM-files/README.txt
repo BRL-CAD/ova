@@ -2,9 +2,16 @@ Virtual Machine
 ===============
 
 The "*.ova" file in this directory is a Virtual Machine (also VM or
-Virtual Appliance) built and tested on a Debian 7.1 host of Oracle's
-VirtualBox 4.3.  The VM contains a turn-key BRL-CAD development
+Virtual Appliance) built and tested on a Windows 7 host of Oracle's
+VirtualBox (VB) 4.3.2.  The VM contains a turn-key BRL-CAD development
 environment. Using it requires about 6 GB of free space.
+
+Notes (see VB documentation on the site at <http://virtualbox.org/>):
+
+1.  You can use various VM settings to optimize your experience.
+
+2.  You may need to reinstall guest additions if the VM is used on a
+    Linux or Mac host.
 
 ============================= IN A NUTSHELL ==========================
 Step 1: Download, Install and Open VirtualBox (http://virtualbox.org/)
@@ -35,8 +42,11 @@ Configuration Notes
 The Chromium browser has BRL-CAD links on the bookmarks tool bar.
 
 The "brlcad-svn" directory has the brlcad/trunk current as of
-2013-11-18 (r58556) and there is an empty "brlcad-build" directory 
-ready to use as described in the "README-brlcad-development.txt" file.
+2013-11-18 (r58556) and there is "brlcad-build" directory which was
+used for a successful trunk build, 'make regress', 'make test', and
+'sudo make install'.  It was then cleaned with 'make clean' but the
+configuration files are still in place.  The directory is ready to use
+as described in the "README-brlcad-development.txt" file.
 
 The successful trunk build is installed in the default location
 (/usr/brlcad/dev-7.24.1). The PATH and MANPATH reflect that location,
