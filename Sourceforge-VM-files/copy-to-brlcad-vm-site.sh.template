@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# see HACKING for details
+
+TODIR="/home/frs/project/b/br/brlcad/BRL-CAD\ for\ Virtual\ Machines"
+
+PWD=<password>
+
+if [ -z $1 ] ; then
+  echo "Usage: $0 <file name>"
+  echo
+  echo "Uses scp to copy a file to the brlcad VM site."
+  exit
+fi
+
+
+SFUSERNAME=`ls ~/.subversion/auth/svn.simple/* | xargs -n 1 grep -A4 sourceforge | tail -1`
+
+ssh -v $SFUSERNAME,brlcad@shell.sourceforge.net create
+
+#rsync -avP -e ssh $1 "$SFUSERNAME,brlcad@shell.sourceforge.net:$TODIR"
+#rsync -avP -e ssh $1 "$SFUSERNAME,brlcad@shell.sourceforge.net:$TODIR"
+rsync -avP -e ssh $1 "$SFUSERNAME@frs.sourceforge.net:$TODIR"
+exit
+
+scp -v $1 "$SFUSERNAME,brlcad@shell.sourceforge.net:'$TODIR'"
+
+

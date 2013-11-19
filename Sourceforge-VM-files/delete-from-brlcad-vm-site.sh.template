@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# see HACKING for details
+
+FROMDIR="/home/frs/project/b/br/brlcad/BRL-CAD\ for\ Virtual\ Machines"
+
+PWD=<password>
+
+if [ -z $1 ] ; then
+  echo "Usage: $0 <file name>"
+  echo
+  echo "Uses ssh to delete the file on the brlcad VM site."
+  exit
+fi
+
+SFUSERNAME=`ls ~/.subversion/auth/svn.simple/* | xargs -n 1 grep -A4 sourceforge | tail -1`
+
+ssh -v $SFUSERNAME,brlcad@shell.sourceforge.net create
+
+ssh $SFUSERNAME,brlcad@shell.sourceforge.net rm "$FROMDIR/$1"
+
+
