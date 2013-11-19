@@ -39,7 +39,7 @@ Desktop customizations
 
   Edit the termminal application (Applications | Accessories), default
   configuration so default terminal windows do NOT have the menu in
-  view.  Aso check unlited scroll and output scroll.
+  view.  Aso check unlimited scroll and output scroll.
 
   Under "BRL-CAD User" in the upper right select System Settings |
   Brightness and Lock. Select "1 hour" for turning off the screen and
@@ -55,6 +55,10 @@ Additional packages
   fop
   chromium
   zlib1g-dev
+  libfontconfig-dev
+  libxext-dev
+  libxi-dev
+
 
 Setting up BRL-CAD
 ------------------
@@ -81,10 +85,16 @@ As root, add user 'brlcad' to the /etc/sudoers file (use 'visudo' per
 'man sudoers'): copy the entry line for 'root' and change 'root' to
 'brlcad'.
 
-Copy, on USB, the following files and install as indicated:
+From the "../VM-user-home-file" directory, copy the following files
+and install as indicated:
 
-   dot_bash_aliases.txt => $HOME/.bash_aliases
+  $ cp dot_bash_aliases.txt $HOME/.bash_aliases
+  $ cp README-brlcad-development.txt $HOME
+  $ cp brlcad-config.sh $HOME
+  $ cp -r brlcad-code-examples $HOME
 
+In the $HOME/brlcad-code-examples directory, run the "link-files.sh
+" script.
 
 
 
