@@ -8,7 +8,8 @@ environment. Using it requires about 6 GB of free space.
 
 Notes (see VB documentation on the site at <http://virtualbox.org/>):
 
-1.  You can use various VM settings to optimize your experience.
+1.  You can use various VB settings for a VM to optimize your
+    experience: percent host cpu, RAM, video memory, etc.
 
 2.  You may need to reinstall guest additions if the VM is used on a
     Linux or Mac host.
@@ -42,7 +43,7 @@ Configuration Notes
 The Chromium browser has BRL-CAD links on the bookmarks tool bar.
 
 The "brlcad-svn" directory has the brlcad/trunk current as of
-2013-11-18 (r58556) and there is "brlcad-build" directory which was
+2013-11-18 (r58556) and there is a "brlcad-build" directory which was
 used for a successful trunk build, 'make regress', 'make test', and
 'sudo make install'.  It was then cleaned with 'make clean' but the
 configuration files are still in place.  The directory is ready to use
