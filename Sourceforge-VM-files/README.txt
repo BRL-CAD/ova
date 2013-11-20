@@ -50,8 +50,8 @@ configuration files are still in place.  The directory is ready to use
 as described in the "README-brlcad-development.txt" file.
 
 The successful trunk build is installed in the default location
-(/usr/brlcad/dev-7.24.1). The PATH and MANPATH reflect that location,
-and Chromium has links to the installed BRL-CAD documentation.
+(/usr/brlcad/dev-7.24.1), and the PATH and MANPATH reflect that
+location.
 
 gcc/g++ version 4.7.2 is installed, as is CMake 2.8.9.
 
