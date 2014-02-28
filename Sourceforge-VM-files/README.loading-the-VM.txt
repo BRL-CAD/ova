@@ -1,12 +1,21 @@
-This is a place holder for the actual VM (*.ova).
-
-To load the VM (and a copy of the README.txt file) into place do the
+To load the VM (and a copy of the ../VM-user-home-files/README.txt file) into place do the
 following:
 
-Copy files:
+Create a clean, working directory:
 
-  $ cp copy-to-brlcad-vm-site.sh.template        copy-to-brlcad-vm-site.sh
-  $ cp delete-from-brlcad-vm-site.sh.template    delete-from-brlcad-vm-site.sh
+  $ rm -r $HOME/tmp
+  $ mkdir $HOME/tmp
+
+Copy the *.ova there:
+
+  $ cp <curr ova> $HOME/tmp
+
+Copy other files from here:
+
+  $ cp ../VM-user-home-files/README.txt          $HOME/tmp
+  $ cp copy-to-brlcad-vm-site.sh.template        $HOME/tmp/copy-to-brlcad-vm-site.sh
+  $ cp delete-from-brlcad-vm-site.sh.template    $HOME/tmp/delete-from-brlcad-vm-site.sh
+  $ cd $HOME/tmp
 
 Make the *.sh files executable:
 

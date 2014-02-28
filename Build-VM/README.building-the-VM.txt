@@ -1,14 +1,11 @@
 VirtualBox
 ==========
 
-Using version 4.3.2.
+Use the latest version of VB.
 
-Select new dynamic hard drive of 20 Gb.
+Select new dynamic hard drive of 25 Gb.
 
 Set System | Processor | Execution Cap to a low but green value.
-
-Select all else as the default (ensure the USB 2.0 capability is NOT
-set since it cannot be distributed).
 
 Debian 7.2 (32-bit: i386)
 =========================
@@ -38,12 +35,11 @@ Desktop customizations
     Windows => Windows focus mode => Mouse
 
   Edit the termminal application (Applications | Accessories), default
-  configuration so default terminal windows do NOT have the menu in
-  view.  Aso check unlimited scroll and output scroll.
+  configuration so default terminal windows do NOT have the menu in view.  Aso
+  check unlited scroll and output scroll.
 
-  Under "BRL-CAD User" in the upper right select System Settings |
-  Brightness and Lock. Select "1 hour" for turning off the screen and
-  turn Lock to "OFF".
+  Under "BRL-CAD User" in the upper right select System Settings | Brightness
+  and Lock. Select "1 hour" for turning off the screen and turn Lock to "OFF".
 
 Additional packages
 -------------------
@@ -58,7 +54,9 @@ Additional packages
   libfontconfig-dev
   libxext-dev
   libxi-dev
-
+  zerofree
+  exfat-utils
+  exfat-fuse
 
 Setting up BRL-CAD
 ------------------
@@ -86,7 +84,7 @@ As root, add user 'brlcad' to the /etc/sudoers file (use 'visudo' per
 'brlcad'.
 
 From the "../VM-user-home-file" directory, copy the following files
-and install as indicated:
+and install in the VM as indicated:
 
   $ cp dot_bash_aliases.txt $HOME/.bash_aliases
   $ cp README-brlcad-development.txt $HOME
