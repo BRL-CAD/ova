@@ -8,6 +8,9 @@ if [ -z "$1" ] ; then
   echo "Copies appropriate files to a staging directory for later"
   echo "  transfer to the BRL-CAD files download area."
   echo
+  echo "The scripts copied to the staging directory will then have"
+  echo "  to be edited to include your Sourceforge password."
+  echo
   exit
 fi
 
@@ -18,11 +21,18 @@ if [ ! -d "$SDIR" ] ; then
   exit
 fi
 
-# the files
-FIL="../VM-user-home-files/README.txt"
-echo "copying '$FIL' to '$SDIR"...
-cp $FIL $SDIR
+# the ordinary files =============
+FILS="\
+../VM-user-home-files/README.txt \
+WARNING.txt \
+"
+for f in $FILS
+do
+  echo "copying '$f' to '$SDIR"...
+  cp $f $SDIR
+done
 
+# the template files =============
 BFILS="\
 copy-to-brlcad-vm-site-sh \
 delete-from-brlcad-vm-site-sh \
@@ -37,3 +47,5 @@ do
   chmod +x $F
 done
 
+echo "Now go to the staging directory and edit the two *.sh"
+echo "  files to add your own Sourceforge password."
