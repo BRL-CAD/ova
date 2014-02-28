@@ -34,17 +34,28 @@ The following assumes you have a valid configuration following the
 steps above (and using the provided script):
 
   $ cd ; cd brlcad-build
-  $ ../brlcad-config.sh >& config.log
+  $ time ../brlcad-config.sh >& config.log
 
 After a successful configure you can start the build:
 
-  $ make >& build.log
+  $ time make >& build.log
 
 Note that the configure and build steps in a virtual machine can take
-a long time (config 10 min 26 sec; build: 3 hr 12 minutes on the
+a long time (config 6 min 2 sec; build: 1 hr 55 minutes on the
 Windows host where the VM was built), whereas a native build on a
 modern, quad-core Debian 64-bit host can be done in seven minutes or
 less.
+
+If you want to do some tests on the successful build, do the following:
+
+  $ time make -k regress >& regress.log
+  $ time make -k test >& test.log
+
+The tests took about 10 min and 1 min each, respectively, on the VM build 
+host.  Note that there may be errors in either test target (hence the 
+'-k' option to make) due to the fact that the trunk is under continuous 
+development, but the build itself is expected to be successful.
+
 
 BRL-CAD Development
 ===================
