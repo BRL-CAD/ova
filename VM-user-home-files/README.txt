@@ -3,7 +3,7 @@ Virtual Machine
 
 The "*.ova" file in this directory is a Virtual Machine (also VM or
 Virtual Appliance) built and tested on a Windows 7 host of Oracle's
-VirtualBox (VB) 4.3.2.  The VM contains a turn-key BRL-CAD development
+VirtualBox (VB) 4.3.8.  The VM contains a turn-key BRL-CAD development
 environment. Using it requires about 6 GB of free space.
 
 Notes (see VB documentation on the site at <http://virtualbox.org/>):
@@ -40,18 +40,21 @@ find an answer quickly. You can find them on IRC (irc.freenode.net
 Configuration Notes
 ===================
 
-The Chromium browser has BRL-CAD links on the bookmarks tool bar.
+The Chromium browser (applications | Internet | Chromium Web Browser) 
+has BRL-CAD links on the bookmarks tool bar.
 
-The "brlcad-svn" directory has the brlcad/trunk current as of
-2013-11-18 (r58556) and there is a "brlcad-build" directory which was
-used for a successful trunk build, 'make regress', 'make test', and
-'sudo make install'.  It was then cleaned with 'make clean' but the
-configuration files are still in place.  The directory is ready to use
-as described in the "README-brlcad-development.txt" file.
+The "brlcad-svn-trunk" directory has the brlcad/trunk current as of
+2014-02-27 (r60001).
+
+The "brlcad-build" directory has a configured and tested build
+followed by a "make clean" command, but the configuration files are
+still in place. The "README-brlcad-development.txt" file
+describes a recommended configuration and build sequence for use
+inside the build directory.
 
 The successful trunk build is installed in the default location
-(/usr/brlcad/dev-7.24.1), and the PATH and MANPATH reflect that
-location.
+(/usr/brlcad/dev-7.24.1). The PATH and MANPATH reflect that location,
+and Chromium has links to the installed BRL-CAD documentation.
 
 gcc/g++ version 4.7.2 is installed, as is CMake 2.8.9.
 
