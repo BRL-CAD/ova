@@ -1,6 +1,0 @@
-cd ~/Downloads/cmake-2.8.10.2
-cmake .
-make
-sudo make install
-cd ~/Downloads
-rm -r cmake*
