@@ -1,0 +1,4 @@
+WARNING!!!
+
+A new or updated VM is being uploaded.  Do not attempt to download any
+VM file until this warning has been replaced by a "README.txt" file.
