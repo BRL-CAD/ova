@@ -15,8 +15,8 @@ Here is a starting build configuration and build sequence.  (See
        -DBRLCAD_ZLIB=OFF              \
        -DCMAKE_BUILD_TYPE=DEBUG
 
-For convenience a shell script (brlcad-config.sh) has been provided to
-execute that sequence.  Note that it is placed outside the build
+For convenience, a shell script (brlcad-config.sh) has been provided
+to execute that sequence.  Note that it is placed outside the build
 directory in case you want to delete everything in that build
 directory.
 
@@ -41,20 +41,21 @@ After a successful configure you can start the build:
   $ time make >& build.log
 
 Note that the configure and build steps in a virtual machine can take
-a long time (config 6 min 2 sec; build: 1 hr 55 minutes on the
-Windows host where the VM was built), whereas a native build on a
-modern, quad-core Debian 64-bit host can be done in seven minutes or
-less.
+a long time (config 6 min 2 sec; build: 1 hr 55 minutes on the Windows
+host where the VM was built), whereas a native build on a modern,
+quad-core Debian 64-bit host can be done in seven minutes or less.
 
-If you want to do some tests on the successful build, do the following:
+If you want to do some tests on the successful build, do the
+following:
 
   $ time make -k regress >& regress.log
   $ time make -k test >& test.log
 
-The tests took about 10 min and 1 min each, respectively, on the VM build 
-host.  Note that there may be errors in either test target (hence the 
-'-k' option to make) due to the fact that the trunk is under continuous 
-development, but the build itself is expected to be successful.
+The tests took about 10 min and 1 min each, respectively, on the VM
+build host.  Note that there may be errors in either test target
+(hence the '-k' option to make) due to the fact that the trunk is
+under continuous development, but the build itself is expected to be
+successful.
 
 
 BRL-CAD Development
