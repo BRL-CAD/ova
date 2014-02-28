@@ -1,10 +1,11 @@
 Virtual Machine
 ===============
 
-The "*.ova" file in this directory is a Virtual Machine (also VM or
-Virtual Appliance) built and tested on a Windows 7 host of Oracle's
-VirtualBox (VB) 4.3.8.  The VM contains a turn-key BRL-CAD development
-environment. Using it requires about 6 GB of free space.
+The "*.ova" file in the files directory of the BRL-CAD Sourceforge
+site is a Virtual Machine (also VM or Virtual Appliance) built and 
+tested on a Windows 7 host of Oracle's VirtualBox (VB) 4.3.8  The VM 
+contains a turn-key BRL-CAD development environment. Using it
+requires about 6 GB of free space.
 
 Notes (see VB documentation on the site at <http://virtualbox.org/>):
 
@@ -17,13 +18,13 @@ Notes (see VB documentation on the site at <http://virtualbox.org/>):
 ============================= IN A NUTSHELL ==========================
 Step 1: Download, Install and Open VirtualBox (http://virtualbox.org/)
 Step 2: Import the VM (File > Import Appliance...)
-Step 3: Open the newly created VM
+Step 3: Open the newly created VM (use the Gnome Classic desktop)
 
 Username: brlcad
 Password: Brlcad!
 
 You should change the password upon first login. To access the VM boot
-menu, press and hold the <SHIFT> key after starting the VM.
+selection menu, press and hold the <F12> key after starting the VM.
 ======================================================================
 
 When starting the VM you may get a message about problems with the
