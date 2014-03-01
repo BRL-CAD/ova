@@ -3,7 +3,7 @@ Virtual Machine
 
 The "*.ova" file in the files directory of the BRL-CAD Sourceforge
 site is a Virtual Machine (also VM or Virtual Appliance) built and
-tested on a Windows 7 host of Oracle's VirtualBox (VB) 4.3.8 The VM
+tested on a Windows 7 host of Oracle's VirtualBox (VB) 4.3.8.  The VM
 contains a turn-key BRL-CAD development environment. Using it requires
 about 6 GB of free space.
 
